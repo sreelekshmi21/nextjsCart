@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -24,4 +24,122 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  font-family: 'Times New Roman', Times, serif;
+} */
+
+@layer components{
+  .card{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    background-color: theme('colors.twitter-blue')
+  }
 }
+
+body{
+  background-color: black;
+  color: white;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  height: 30px;
+  
+}
+.container li{
+  list-style: none;
+}
+.container li a{
+  text-decoration: none;
+  
+  /* color: blueviolet; */
+  color: white;
+}
+.container .active{
+  padding: 10px;
+    background-color: rgb(236, 21, 104);
+    border-radius: 10px;
+
+  color: black;
+}
+@media (max-width:768px) {
+  .container{
+    margin-top: 20px;
+    background-color: yellow;
+  }
+}
+.container-home{
+  display: flex;
+  justify-content: space-between;
+}
+.container-button{
+  display: flex;
+  gap: 10px;
+}
+.container-button > button{
+  border-radius: 10px;
+  background-color: chartreuse;
+  padding: 20px;
+}
+.contact-container{
+  display: flex;
+  /* align-items: center; */
+  gap:30px;
+}
+.contactform-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap:20px;
+  flex: 1;
+}
+form button{
+  padding:20px;
+  background-color: rgb(121, 216, 87);
+}
+.postcard-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blogpost-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post-container{
+  display: flex;
+  gap: 50px;
+}
+@media (max-width:768px) {
+  .post-container{
+    flex-direction: column;
+  }
+}
+.single-post-container{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(243, 186, 115);
+  color: black;
+}
+.single-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+/* .card {
+  @apply rounded-b-lg shadow-md;
+}
+@apply .card{
+   mb-5 block rounded-lg border border-gray-200;
+} */
+
